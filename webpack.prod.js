@@ -10,7 +10,7 @@ module.exports = merge(common, {
   devtool: 'source-map',
 
   plugins: [
-    new MiniCssExtractPlugin({ filename: 'style.[contenthash].css' }),
+    new MiniCssExtractPlugin({ filename: 'style.css' }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/views/index.pug'),
       filename: 'index.html',
@@ -26,7 +26,7 @@ module.exports = merge(common, {
 
       // Load CSS, SASS, SCSS
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.s?css$/i,
         use: [
           // Extract CSS from JS
           MiniCssExtractPlugin.loader,

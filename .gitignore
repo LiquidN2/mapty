@@ -1,4 +1,8 @@
 /.idea
+/dist/js
+/dist/index.html
+/dist/style.css
+/dist/style.css.map
 /node_modules
 package-lock.json
 Mapty-architecture-part-1.png
