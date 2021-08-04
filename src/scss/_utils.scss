@@ -1,0 +1,29 @@
+.disable-select {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.center-text {
+  text-align: center;
+}
+
+.u-margin-top {
+  &--xs {
+    margin-top: 0.5rem;
+  }
+  &--sm {
+    margin-top: 1rem;
+  }
+  &--md {
+    margin-top: 2.5rem;
+  }
+  &--lg {
+    margin-top: 5rem;
+  }
+  &--xl {
+    margin-top: 8rem;
+  }
+}

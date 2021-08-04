@@ -1,0 +1,26 @@
+mixin workoutDetails(icon, value, unit)
+  .workout__details
+    span.workout__icon #{ icon }
+    span.workout__value #{ value }
+    span.workout__unit #{ unit }
+
+li.workout.workout--cycling(data-id='1234567891')
+  .workout__menu
+    button.workout__menu-btn
+      svg.workout__menu-icon.workout__menu-icon--edit
+        use(xlink:href='img/sprite.svg#icon-pencil')
+    button.workout__menu-btn
+      svg.workout__menu-icon.workout__menu-icon--edit
+        use(xlink:href='img/sprite.svg#icon-cross')
+  //
+  //.workout__menu
+  //  svg.workout__menu-icon.workout__menu-icon--edit
+  //    use(xlink:href='img/sprite.svg#icon-pencil')
+  //  svg.workout__menu-icon.workout__menu-icon--delete
+  //    use(xlink:href='img/sprite.svg#icon-cross')
+
+  h2.workout__title Cycling on Jun 3
+  +workoutDetails('🚴‍♀', 27, 'km')
+  +workoutDetails('⏱', 95, 'min')
+  +workoutDetails('⚡️', 16, 'km/h')
+  +workoutDetails('⛰', 223, 'm')

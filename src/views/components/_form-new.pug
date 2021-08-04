@@ -1,0 +1,45 @@
+form#form--new.form.form--new.hidden
+  .form__row
+    label.form__label(for='type') Type
+    select#type.form__input.form__input--type(name='type')
+      option(value='running', selected) Running
+      option(value='cycling') Cycling
+
+  .form__row
+    label.form__label(for='distance') Distance
+    input#distance.form__input.form__input--distance(
+      name='distance',
+      type='number',
+      step='0.01',
+      placeholder='km'
+    )
+
+  .form__row
+    label.form__label(for='duration') Duration
+    input#duration.form__input.form__input--duration(
+      name='duration',
+      type='number',
+      step='0.01',
+      placeholder='min'
+    )
+
+  .form__row
+    label.form__label(for='cadence') Cadence
+    input#cadence.form__input.form__input--cadence(
+      name='cadence',
+      type='number',
+      placeholder='steps/min'
+    )
+
+  .form__row.form__row--hidden
+    label.form__label(for='elevation') Elev Gain
+    input#elevation.form__input.form__input--elevation(
+      name='elevation',
+      type='number',
+      step='0.01',
+      placeholder='meters'
+    )
+
+  input#workout-id(type='hidden', name='workout-id', value='')/
+
+  button.btn.btn--hidden OK

@@ -1,0 +1,24 @@
+.btn {
+  border: none;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--color-light--1);
+  }
+
+  &--brand-2 {
+    background-color: var(--color-brand--2);
+    &:hover {
+      background-color: var(--color-brand--2--daker);
+    }
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

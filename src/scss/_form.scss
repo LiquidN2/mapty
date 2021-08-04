@@ -1,0 +1,176 @@
+.form {
+  background-color: var(--color-dark--2);
+  border-radius: 5px;
+  padding: 1.5rem 2.75rem;
+  margin-bottom: 1.75rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2.5rem;
+
+  /* Match height and activity boxes */
+  height: 9.25rem;
+  transition: all 0.5s, transform 1ms;
+
+  &--update {
+    padding: 1.5rem 0 0;
+    margin-bottom: 0;
+    height: auto;
+  }
+
+  &--menu {
+    background-color: var(--color-dark--1);
+    height: auto;
+  }
+
+  &--filter {
+    height: auto;
+    gap: 1rem 2.5rem;
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+
+    &--hidden {
+      display: none;
+    }
+
+    &--full {
+      grid-column: 1 / -1;
+    }
+
+    &--checkbox-btn {
+      justify-content: space-between;
+    }
+  }
+
+  &__label {
+    flex: 0 0 50%;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &__row--full &__label {
+    flex: 0 1 25%;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.3rem 1.1rem;
+    font-family: inherit;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--color-light--3);
+    transition: all 0.2s;
+
+    &:focus {
+      outline: none;
+      background-color: #fff;
+    }
+  }
+
+  &__input-group {
+    &--checkbox-btn {
+      input {
+        display: none;
+      }
+
+      label {
+        display: flex;
+        justify-content: center;
+        width: 7rem;
+        font-size: 1.5rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.1s;
+      }
+
+      label.filter__label {
+        &--running {
+          border: 2px solid var(--color-brand--2);
+        }
+
+        &--cycling {
+          border: 2px solid var(--color-brand--1);
+        }
+      }
+
+      input:checked + label.filter__label {
+        &--running {
+          background-color: var(--color-brand--2);
+        }
+
+        &--cycling {
+          background-color: var(--color-brand--1);
+        }
+      }
+    }
+  }
+
+  &__btn {
+    border: none;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--color-light--1);
+    }
+
+    &--brand-2 {
+      background-color: var(--color-brand--2);
+      &:hover {
+        background-color: var(--color-brand--2--daker);
+      }
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  select.center-select-text {
+    text-align-last: center;
+  }
+
+  input.center-placeholder-text {
+    &::-webkit-input-placeholder {
+      text-align: center;
+    }
+
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      text-align: center;
+    }
+
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      text-align: center;
+    }
+
+    &:-ms-input-placeholder {
+      text-align: center;
+    }
+  }
+}
+
+.hidden {
+  transform: translateY(-30rem);
+  height: 0;
+  padding: 0 2.25rem;
+  margin-bottom: 0;
+  opacity: 0;
+}

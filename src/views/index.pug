@@ -1,0 +1,41 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')/
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')/
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')/
+    link(rel='shortcut icon', type='image/png', href='img/icon.png')/
+
+    link(rel='preconnect', href='https://fonts.googleapis.com')/
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)/
+    link(
+      href='https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap',
+      rel='stylesheet'
+    )/
+
+    link(
+      rel='stylesheet',
+      href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css',
+      integrity='sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==',
+      crossorigin
+    )
+
+    //link(
+    //  rel='stylesheet',
+    //  href='https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css'
+    //)/
+    //
+    //script(defer, src='https://cdn.jsdelivr.net/npm/flatpickr')/
+
+    title Mapty // Map your workouts
+
+  body
+    //include components/_sidenav
+    //button.btn--inspect Log current wo
+    //button.btn--inspect-all Log all wo
+    //button.btn--remove-mkr Remove marker
+
+    include components/_sidebar
+    //include components/_popup
+
+    #map

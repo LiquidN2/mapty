@@ -1,0 +1,14 @@
+.sidebar
+  img.logo(alt='logo', src='img/logo.png')/
+
+  ul.workouts
+    include _form-new
+    include _form-filter
+
+    //include components/_workout-running
+    //include components/_workout-cycling
+
+  p.copyright
+    | &copy; Copyright by &nbsp;
+    a.twitter-link(target='_blank', href='https://twitter.com/jonasschmedtman') Jonas Schmedtmann
+    | .&nbsp;Use for learning or your portfolio. Don't use to teach. Don't claim as your own.

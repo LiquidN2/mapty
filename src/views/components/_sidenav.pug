@@ -1,0 +1,84 @@
+.side-nav.side-nav--hidden
+  .side-nav__menu-btn-container
+    svg.side-nav__menu-btn.side-nav__menu-btn--cog
+      use(xlink:href='img/sprite.svg#icon-cog')
+
+  //form.form.form--menu.form--menu-update
+  //  h3.form__title Create / Update workout
+  //
+  //  .form__row
+  //    label.form__label(for='type') Type
+  //    select#type.form__input.form__input--type(name='type')
+  //      option(value='running', selected) Running
+  //      option(value='cycling') Cycling
+  //
+  //  .form__row
+  //    label.form__label(for='distance') Distance
+  //    input#distance.form__input.form__input--distance(
+  //      name='distance',
+  //      type='number',
+  //      placeholder='km'
+  //    )
+  //
+  //  .form__row
+  //    label.form__label(for='duration') Duration
+  //    input#duration.form__input.form__input--duration(
+  //      name='duration',
+  //      type='number',
+  //      placeholder='min'
+  //    )
+  //
+  //  .form__row
+  //    label.form__label(for='cadence') Cadence
+  //    input#cadence.form__input.form__input--cadence(
+  //      name='cadence',
+  //      type='number',
+  //      placeholder='steps/min'
+  //    )
+  //
+  //  .form__row.form__row--hidden
+  //    label.form__label(for='elevation') Elev Gain
+  //    input#elevation.form__input.form__input--elevation(
+  //      name='elevation',
+  //      type='number',
+  //      placeholder='meters'
+  //    )
+  //
+  //  button.form__btn-menu Update
+
+  form.form.form--menu.form--menu-filter
+    h3.form__title Filter workouts
+
+    .form__row
+      label.form__label(for='filter-type') Type
+      select#filter-type.form__input.form__input--type(name='filter-type')
+        option(value='running', selected) Running
+        option(value='cycling') Cycling
+
+    .form__row
+      label.form__label(for='location') Location
+      input#location.form__input.form__input--location(
+        name='location',
+        type='text',
+        placeholder='Suburb/City'
+      )
+
+    .form__row
+      label.form__label(for='date-start') Start date
+      input#date-start.form__input.form__input--date-start(
+        name='date-start',
+        type='text',
+        placeholder='- select -'
+      )
+
+    .form__row
+      label.form__label(for='end-date') End date
+      input#end-date.form__input.form__input--end-date(
+        name='end-date',
+        type='text',
+        placeholder='- select -'
+      )
+
+    button.form__btn-menu.form__btn-menu--display Display
+
+    button.form__btn-menu.form__btn-menu--clear Clear

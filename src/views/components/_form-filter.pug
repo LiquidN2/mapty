@@ -1,0 +1,41 @@
+form#form--filter.form.form--filter.disable-select.hidden
+  .form__row.form__row--checkbox-btn
+    .form__input-group.form__input-group--checkbox-btn
+      input#filter--running.form__input--filter-running(
+        type='checkbox',
+        value='filter-running',
+        checked
+      )/
+      label.filter__label--running(for='filter--running') 🏃‍♂️
+
+    .form__input-group.form__input-group--checkbox-btn
+      input#filter--cycling.form__input--filter-cycling(
+        type='checkbox',
+        value='filter-cycling',
+        checked
+      )/
+      label.filter__label--cycling(for='filter--cycling') 🚴‍♀
+
+  .form__row
+    //label.form__label(for='filter--sort') Sort by
+    select#filter--sort.form__input.form__input--filter-sort.center-select-text(
+      name='filter--sort'
+    )
+      option(value='', selected) -- sort by --
+      option(value='des-date') Newest to oldest
+      option(value='asc-date') Oldest to newest
+      option(value='des-distance') Distance - longest to shortest
+      option(value='asc-distance') Distance - shortest to longest
+      option(value='des-duration') Duration - longest to shortest
+      option(value='asc-duration') Duration - shortest to longest
+
+  .form__row.form__row--full
+    //label.form__label(for='filter--date-range') Date
+    input#filter--date.form__input.form__input--filter-date.center-text.center-placeholder-text(
+      name='filter--date',
+      type='text',
+      placeholder='- select date range -'
+    )
+
+  button.btn Display
+  button.btn.btn--delete-all Delete all

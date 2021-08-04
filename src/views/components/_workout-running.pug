@@ -1,0 +1,24 @@
+mixin workoutDetails(icon, value, unit)
+  .workout__details
+    span.workout__icon #{ icon }
+    span.workout__value #{ value }
+    span.workout__unit #{ unit }
+
+li.workout.workout--running(data-id='1234567890')
+  .workout__menu
+    button.workout__menu-btn
+      svg.workout__menu-icon.workout__menu-icon--edit
+        use(xlink:href='img/sprite.svg#icon-pencil')
+    button.workout__menu-btn
+      svg.workout__menu-icon.workout__menu-icon--edit
+        use(xlink:href='img/sprite.svg#icon-cross')
+    //svg.workout__menu-icon.workout__menu-icon--edit
+    //  use(xlink:href='img/sprite.svg#icon-pencil')
+    //svg.workout__menu-icon.workout__menu-icon--delete
+    //  use(xlink:href='img/sprite.svg#icon-cross')
+
+  h2.workout__title Running on Jun 1
+  +workoutDetails('🏃‍♂️', 5.2, 'km')
+  +workoutDetails('⏱', 24, 'min')
+  +workoutDetails('⚡️', 4.6, 'min/km')
+  +workoutDetails('🦶🏼', 178, 'spm')
